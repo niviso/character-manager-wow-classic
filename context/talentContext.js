@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-const TalentsContext = React.createContext([{}, () => {}]);
+const TalentContext = React.createContext([{}, () => {}]);
 
-const TalentsProvider = (props) => {
-  const [appState, setTalentsState] = useState(
+const TalentProvider = (props) => {
+  const [state, setState] = useState(
+    [
     {
       id: 1,
-      name: 'Test 1',
+      name: 'Ancestral Knowledge',
       description: 'lorem lip',
+      icon: 'talents/Spells/Spell_Shadow_GrimWard.png',
       level: 0,
       slot: 1,
       maxPoints: 5,
@@ -16,10 +18,11 @@ const TalentsProvider = (props) => {
     },
     {
       id: 2,
-      name: 'Test 2',
+      name: 'Shield Specialization',
       description: 'lorem lip',
+      icon: 'talents/Spells/Spell_Shadow_GrimWard.png',
       level: 0,
-      slot: 4,
+      slot: 2,
       maxPoints: 5,
       currentPoints: 0,
       requiredPoints: 0,
@@ -27,8 +30,45 @@ const TalentsProvider = (props) => {
     },
     {
       id: 3,
-      name: 'Test 3',
+      name: 'Guaridan Totems',
       description: 'lorem lip',
+      icon: 'talents/Spells/Spell_Shadow_GrimWard.png',
+      level: 1,
+      slot: 1,
+      maxPoints: 5,
+      currentPoints: 0,
+      requiredPoints: 0,
+      unlocksId: null
+    },
+    {
+      id: 4,
+      name: 'Thundering Strikes',
+      description: 'lorem lip',
+      icon: 'talents/Spells/Spell_Shadow_GrimWard.png',
+      level: 1,
+      slot: 2,
+      maxPoints: 5,
+      currentPoints: 0,
+      requiredPoints: 0,
+      unlocksId: null
+    },
+    {
+      id: 5,
+      name: 'Improved Ghost Wolf',
+      description: 'lorem lip',
+      icon: 'talents/Spells/Spell_Shadow_GrimWard.png',
+      level: 1,
+      slot: 3,
+      maxPoints: 5,
+      currentPoints: 0,
+      requiredPoints: 0,
+      unlocksId: null
+    },
+    {
+      id: 6,
+      name: 'Improved Lightning Shield',
+      description: 'lorem lip',
+      icon: 'talents/Spells/Spell_Shadow_GrimWard.png',
       level: 1,
       slot: 4,
       maxPoints: 5,
@@ -36,14 +76,13 @@ const TalentsProvider = (props) => {
       requiredPoints: 0,
       unlocksId: null
     }
-
-  );
+  ]);
 
   return (
-    <TalentsContext.Provider value={[appState, setTalentsState]}>
+    <TalentContext.Provider value={[state, setState]}>
       {props.children}
-    </TalentsContext.Provider>
+    </TalentContext.Provider>
   );
 }
 
-export { TalentsContext, TalentsProvider };
+export { TalentContext, TalentProvider };

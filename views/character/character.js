@@ -14,9 +14,10 @@ export default function Character() {
       <Text style={Styles.Name}>Petmycat</Text>
       <Text style={Styles.Class}> {'<'}Troll Hunter{'>'} </Text>
       </View>
-      <View style={Styles.ProffesionWrapper}>
-      <ProffesionPicker/>
+      <View>
+      <TalentTree/>
       </View>
+
     </View>
   );
 }
