@@ -5,7 +5,7 @@ import Icon from '../icon/icon';
 export default function ProffesionPicker() {
   return (
     <View style={Styles.Container}>
-    <Icon/>
+    <Icon fill={false}/>
     </View>
   );
 }

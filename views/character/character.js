@@ -2,6 +2,8 @@ import React from 'react';
 import { Text, View,Image } from 'react-native';
 import Styles from './styles.scss';
 import ProffesionPicker from '../../components/proffesionPicker/proffesionPicker';
+import TalentTree from '../../components/talentTree/talentTree';
+
 export default function Character() {
   return (
     <View style={Styles.Container}>
