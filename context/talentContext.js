@@ -7,7 +7,7 @@ const TalentProvider = (props) => {
     [
     {
       id: 1,
-      name: 'Ancestral Knowledge      ',
+      name: 'Ancestral Knowledge',
       description: 'lorem lip',
       icon: 'talents/Spells/Spell_Shadow_GrimWard.png',
       level: 0,
@@ -88,7 +88,7 @@ const TalentProvider = (props) => {
       slot: 2,
       maxPoints: 5,
       currentPoints: 0,
-      requiredPoints: 5,
+      requiredPoints: 15,
       unlocksId: null,
       unlockedById: 4
     }

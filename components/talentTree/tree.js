@@ -30,7 +30,6 @@ export default function Tree(props){
     }
 
     if((totalTalentPoints+1)%5 == 0){
-      console.log("TRIGGER");
       for(let i = 0;i!=tmp.length;i++){
         if(tmp[i].level == ((totalTalentPoints+1)/5)){
           tmp[i].active = true;
@@ -51,7 +50,7 @@ return(
 
   <View style={Styles.Tree}>
   {talents}
-  <Text>{totalTalentPoints}</Text>
+  <Text>Totalt points:{totalTalentPoints}</Text>
 
   </View>
 )
