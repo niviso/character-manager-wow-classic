@@ -6,7 +6,7 @@ import Styles from './styles.scss';
 
 export default function Tree(props){
   const [state,setState] = useContext(TalentContext);
-  const [totalTalentPoints,setTotalTalentPoints] = useState(1);
+  const [totalTalentPoints,setTotalTalentPoints] = useState(0);
   const window = Dimensions.get("window");
 
   const addPoint = (id) => {
@@ -26,8 +26,17 @@ export default function Tree(props){
     }
 
     if(talent.currentPoints == talent.maxPoints && talent.unlocksId){
-      tmp[talent.unlocksId].active = true
+      tmp[talent.unlocksId-1].active = true
     }
+
+    if((totalTalentPoints+1)%5 == 0){
+      console.log("TRIGGER");
+      for(let i = 0;i!=tmp.length;i++){
+        if(tmp[i].level == ((totalTalentPoints+1)/5)){
+          tmp[i].active = true;
+        }
+      }
+      }
 
 
     setState(tmp);
